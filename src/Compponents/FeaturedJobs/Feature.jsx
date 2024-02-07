@@ -34,9 +34,9 @@ const Feature = ({ feature }) => {
             <button className="text-xs border border-purple-400 text-purple-500 px-4 py-2 rounded-lg font-bold mx-2" >Remote</button>
             <button className="text-xs border border-purple-400 text-purple-500 px-4 py-2 rounded-lg font-bold mx-2" >Full Time</button>
           </div>
-          <div className="card-actions justify-center md:justify-end">
+          <div className="card-actions justify-start md:justify-end">
             <Link to={`/job/${id}`}>
-            <button className="btn btn-primary">Watch Detail</button>
+            <button className="btn btn-primary my-4 md:my-2">Watch Detail</button>
             </Link>
             
           </div>

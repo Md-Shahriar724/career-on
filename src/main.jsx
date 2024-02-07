@@ -6,7 +6,10 @@ import {
   RouterProvider,
 } from "react-router-dom";
 import Home from './Compponents/Home/Home.jsx';
-import Root from './Compponents/Home/Root/Root.jsx';
+import Blogs from './Compponents/Blogs/Blogs.jsx';
+import ApliedJobs from './Compponents/Aplied Jobs/ApliedJobs.jsx';
+import Jobs from './Compponents/Jobs/Jobs.jsx';
+import Root from './Compponents/Root/Root.jsx';
 
 
 
@@ -19,6 +22,18 @@ const router = createBrowserRouter([
       {
         path : '/',
         element : <Home></Home>
+      },
+      {
+        path : '/blogs',
+        element : <Blogs></Blogs>
+      },
+      {
+        path : '/appliedjobs',
+        element : <ApliedJobs></ApliedJobs>
+      },
+      {
+        path : '/jobs',
+        element : <Jobs></Jobs>
       }
     ]
   }

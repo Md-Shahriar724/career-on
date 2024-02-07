@@ -1,11 +1,12 @@
-
-
+import FeaturedJobs from "../FeaturedJobs/FeaturedJobs";
+import JobCatagorie from "../JobCatagories/JobCatagorie";
 
 
 const Home = () => {
     return (
         <div>
-            <h1>Hidsaldkflsdakfjl</h1>
+            <JobCatagorie></JobCatagorie>
+            <FeaturedJobs></FeaturedJobs>
         </div>
     );
 };

@@ -18,7 +18,7 @@ const Blogs = () => {
    
     return (
         <div>
-            <h1>This is Blogs</h1>
+            
             <div className="grid grid-cols-1 md:grid-cols-2 justify-around items-center">
                 {
                     newses.map((news) =><News key={news.url} news={news}></News>)

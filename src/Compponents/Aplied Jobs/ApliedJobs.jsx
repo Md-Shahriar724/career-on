@@ -7,6 +7,7 @@ import { FiPhoneCall } from "react-icons/fi";
 import { MdOutlineMarkEmailRead } from "react-icons/md";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import { saveJobApplication } from "../Utils/Store";
 
 
 const ApliedJobs = () => {
@@ -15,7 +16,6 @@ const ApliedJobs = () => {
   const idInt = parseInt(id);
   const oneJob = AllJobs.find((job) => job.id === idInt);
   const {
-    logo,
     company_name,
     contact_information,
     job_description,
@@ -28,6 +28,9 @@ const ApliedJobs = () => {
   const { phone, email, address } = contact_information;
 
   const handleTost = ()=>{
+
+    saveJobApplication(idInt)
+
     toast('🦄You successfully applyed', {
       position: "top-right",
       autoClose: 5000,

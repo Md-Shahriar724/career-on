@@ -5,6 +5,9 @@ import { AiOutlineDollarCircle } from "react-icons/ai";
 import { TbFolderBolt } from "react-icons/tb";
 import { FiPhoneCall } from "react-icons/fi";
 import { MdOutlineMarkEmailRead } from "react-icons/md";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 
 const ApliedJobs = () => {
   const AllJobs = useLoaderData();
@@ -24,10 +27,23 @@ const ApliedJobs = () => {
   } = oneJob;
   const { phone, email, address } = contact_information;
 
+  const handleTost = ()=>{
+    toast('🦄You successfully applyed', {
+      position: "top-right",
+      autoClose: 5000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      theme: "light",
+      });
+  }
+
   return (
     <div className=" md:flex gap-4 item-center justify-around ">
-      
-        <div className="w-3/4">
+   <ToastContainer/>
+        <div className=" w-5/6 mx-auto md:w-3/4">
           <div className="my-20 ">
             <div className="hero  shadow-md rounded-xl">
               <div className="hero-content flex-col lg:flex-row">
@@ -59,7 +75,7 @@ const ApliedJobs = () => {
           </div>
         </div>
 
-        <div className="w-1/4 my-2 md:my-20 rounded-md shadow-md bg-purple-100 grid justify-end">
+        <div className="w-5/6 mx-auto md:w-1/4  my-10 md:my-20 rounded-md shadow-md bg-purple-100 grid justify-end">
 
         <div className="px-4 my-4 ">
 
@@ -92,9 +108,9 @@ const ApliedJobs = () => {
         
         </div>
         <div className=" ">
-        <Link to="/appliedjobs">
-          <button className="bg-purple-500 px-12 py-2 mt-2 rounded-lg text-white ">Aplly Now</button>
-        </Link>
+        
+          <button onClick={()=>handleTost()} className="bg-purple-500 px-12 py-2 mt-2 rounded-lg text-white ">Aplly Now</button>
+        
         </div>
         </div>
 

@@ -3,7 +3,6 @@ import { LuDollarSign } from "react-icons/lu";
 import { Link } from "react-router-dom";
 
 const Feature = ({ feature }) => {
-  console.log(feature);
   const {
     id,
     logo,
@@ -36,7 +35,7 @@ const Feature = ({ feature }) => {
           </div>
           <div className="card-actions justify-start md:justify-end">
             <Link to={`/job/${id}`}>
-            <button className="btn btn-primary my-4 md:my-2">Watch Detail</button>
+            <button onClick={()=>{console.log(id)}} className="btn btn-primary my-4 md:my-2">Watch Detail</button>
             </Link>
             
           </div>
